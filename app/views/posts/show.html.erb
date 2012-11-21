@@ -1,17 +1,19 @@
 <h1><%= @post.title %></h1>
 
-<%= @post.body %>
+<div id="post_display">
+	<%= simple_format(@post.body) %>
+</div>
 
 <h2> Comments </h2>
 
 <% @post.comments.each do |comment| %>
-	<p><%= comment.body %></p>
-	<p><%= time_ago_in_words comment.created_at %> ago</p>
+	<p><%= simple_format(comment.body) %></p>
+	<p id="c_timestamp"><%= time_ago_in_words comment.created_at %> ago</p>
 	<p><%= link_to "Delete Comment", [@post, comment], :method => :delete, :confirm => "Are you sure?" %></p>
 <% end %>
 
 <%= form_for [@post, @post.comments.build] do |f| %>
-	<p><%= f.text_area :body, :size => '20x10' %></p>
+	<p><%= f.text_area :body, :size => '20x10', :id => 'textcomments' %></p>
 	<p><%= f.submit "Post Comment" %></p>
 <% end %>
 

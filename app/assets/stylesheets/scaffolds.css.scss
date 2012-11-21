@@ -1,9 +1,10 @@
 body {
-  background-color: #eeeeee;
+  background-image:url('images/retina_wood.png');
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-align: center;
 }
 
 p, ol, ul, td {
@@ -19,13 +20,12 @@ pre {
 }
 
 a {
-  color: #000;
+  color: #168594;
   &:visited {
-    color: #666;
+    color: #168594;
   }
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #24CAE0;
   }
 }
 
@@ -68,22 +68,44 @@ div {
   }
 }
 .post_list{
-  background: #fff;
-  border: 1px solid;
+  //float: right;
+  border-left: 1px solid;
+  border-right: 1px solid;
   border-radius: 5px;
   text-align: center;
   width: 50%;
   margin: auto;
 }
-#title{
-  text-align: center;
-  text-shadow: 1px 1px 1px #000000;
+h1{
+  font-family: "Georgia", serif;
+  font-variant: small-caps;
+  color: #6B0EA1;
+  //text-shadow: 1px 1px 1px #8f8f8f;
 }
-#subtitle{
-  text-align: center;
+h2{
+  color: #6B0EA1;
   font-variant: small-caps;
 }
 //.post_index_container{
 //  background: #eee;
 //  text-align: center;
 //}
+textarea{
+  background: 0;
+}
+#titlefield{
+  background: 0;
+  border: 1px solid;
+}
+#post_display{
+  width: 75%;
+  margin: auto;
+}
+#c_timestamp{
+  font-size: 90%;
+  font-variant: small-caps;
+}
+#p_timestamp{
+  font-size: 90%;
+  font-variant: small-caps;
+}
