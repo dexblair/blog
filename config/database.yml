@@ -6,7 +6,7 @@ development:
   username: blog
   password: shadow88
   pool: 5
-  host: 127.0.0.1
+  host: localhost
   port: 5432
   database: blog_development
 
@@ -20,7 +20,7 @@ test:
   username: blog
   password: shadow88
   pool: 5
-  host: 127.0.0.1
+  host: localhost
   port: 5432
   database: blog_test
 
@@ -30,6 +30,6 @@ production:
   username: blog
   password: shadow88
   pool: 5
-  host: 127.0.0.1
+  host: localhost
   port: 5432
   database: blog_production
