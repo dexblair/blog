@@ -5,11 +5,8 @@
 <div class="post_list">
 	<% @posts.each do |post| %>
   		<h2><%= link_to post.title, post %></h2>
+      <p><%= truncate post.body %></p>
   		<p id="p_timestamp"><%= time_ago_in_words post.created_at %> ago</p>
-
-  		<p>
-    		<%= truncate post.body %>
-  		</p>
 	<% end %>
 
 		<p>
