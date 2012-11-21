@@ -1,5 +1,5 @@
 body {
-  background-color: #fff;
+  background-color: #eeeeee;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -67,3 +67,21 @@ div {
     list-style: square;
   }
 }
+.post_list{
+  background: #fff;
+  border: 1px #000000;
+  border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+#title{
+  text-align: center;
+}
+#subtitle{
+  text-align: center;
+}
+//.post_index_container{
+//  background: #eee;
+//  text-align: center;
+//}

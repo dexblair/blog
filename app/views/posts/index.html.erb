@@ -1,16 +1,21 @@
-<h1>Welcome to my blog!</h1>
+<div class="post_index_container">
+<h1 id="title">The Blog of Champions</h1>
+<h2 id="subtitle">Dexter S. Blair</h2>
 
-<% @posts.each do |post| %>
-  <h2><%= link_to post.title, post %></h2>
-  <p>
-    <%= time_ago_in_words post.created_at %> ago
-  </p>
+<div class="post_list">
+	<% @posts.each do |post| %>
+  		<h2><%= link_to post.title, post %></h2>
+  		<p>
+    		<%= time_ago_in_words post.created_at %> ago
+  		</p>
 
-  <p>
-    <%= truncate post.body %>
-  </p>
-<% end %>
+  		<p>
+    		<%= truncate post.body %>
+  		</p>
+	<% end %>
 
-<p>
-  <%= link_to "New Post", new_post_path %>
-</p>
+		<p>
+  			<%= link_to "New Post", new_post_path %>
+		</p>
+</div>
+</div>
