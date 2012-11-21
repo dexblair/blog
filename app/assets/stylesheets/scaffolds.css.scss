@@ -69,7 +69,7 @@ div {
 }
 .post_list{
   background: #fff;
-  border: 1px #000000;
+  border: 1px solid;
   border-radius: 5px;
   text-align: center;
   width: 50%;
@@ -77,9 +77,11 @@ div {
 }
 #title{
   text-align: center;
+  text-shadow: 1px 1px 1px #000000;
 }
 #subtitle{
   text-align: center;
+  font-variant: small-caps;
 }
 //.post_index_container{
 //  background: #eee;
