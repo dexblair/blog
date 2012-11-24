@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  devise_for :users
+
   get "comments/create"
 
   get "comments/destroy"
