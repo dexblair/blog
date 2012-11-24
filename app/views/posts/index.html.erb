@@ -1,3 +1,4 @@
+
 <div class="post_index_container">
 <h1 id="title">The Blog Of Champions</h1>
 <h2 id="subtitle">Dexter S. Blair</h2>
@@ -11,20 +12,16 @@
       <p><%= truncate post.body %></p>
   		<p id="p_timestamp"><%= time_ago_in_words post.created_at %> ago</p>
 	<% end %>
-
-		<p>
-  			<%= link_to "New Post", new_post_path %>
-		</p>
-		<div id='usercontrols'>
+</div>
+<div id='controls'>			
+	<% if !user_signed_in? %>
+		<%= link_to 'Sign In', new_user_session_path %>
+	<% end %>
 			
-			<% if !user_signed_in? %>
-				<%= link_to 'Sign Up', new_user_registration_path %>
-				<%= link_to 'Sign In', new_user_session_path %>
-			<% end %>
-			
-			<% if user_signed_in? %>
-				<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
-			<% end %>
-		</div>
+	<% if user_signed_in? %>
+		<%= link_to 'Sign Out', destroy_user_session_path, :method => :delete %>
+		<br />
+		<%= link_to "New Post", new_post_path %>
+	<% end %>
 </div>
 </div>
