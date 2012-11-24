@@ -2,9 +2,6 @@
 <div class="post_index_container">
 <h1 id="title">The Blog Of Champions</h1>
 <h2 id="subtitle">Dexter S. Blair</h2>
-<% if user_signed_in? %>
-	<h2 id="p_timestamp">Signed in as... <%= current_user.email %></h2>
-<% end %>
 
 <div class="post_list">
 	<% @posts.each do |post| %>
