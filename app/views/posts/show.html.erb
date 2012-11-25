@@ -9,7 +9,9 @@
 <% @post.comments.each do |comment| %>
 	<p><%= simple_format(comment.body) %></p>
 	<p id="c_timestamp"><%= time_ago_in_words comment.created_at %> ago</p>
-	<p><%= link_to "Delete Comment", [@post, comment], :method => :delete, :confirm => "Are you sure?" %></p>
+	<% if user_signed_in? %>
+		<p><%= link_to "Delete Comment", [@post, comment], :method => :delete, :confirm => "Are you sure?" %></p>
+	<% end %>
 <% end %>
 
 <%= form_for [@post, @post.comments.build] do |f| %>
